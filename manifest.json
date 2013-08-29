@@ -1,0 +1,32 @@
+{
+	"manifest_version": 2,
+
+	"name": "HTML validator",
+	"description": "Chrome extension template",
+	"version": "1.0",
+	"content_scripts": [{
+			"matches": [ "http://*/*", "https://*/*" ],
+			"js": [
+				"js/zepto/zepto.js",
+				"js/zepto/event.js",
+				"js/zepto/ajax.js",
+				"js/error.js",
+				"js/content.js"
+			],
+			"run_at" : "document_end"
+	}],
+	"background" : {
+		"scripts": [ "js/background.js" ]
+	},
+	"permissions": [
+		"tabs"
+	],
+	"browser_action": {
+		"default_icon": "i/logo-32x32.png"
+	},
+	"icons": {
+		"128": "i/logo-128x128.png"
+	},
+	"web_accessible_resources": [
+	]
+}
